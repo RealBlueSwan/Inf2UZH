@@ -1,0 +1,13 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/greenswan/Downloads/programming/ex1/Archive/task_1'
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _snippet1, symObjAddr: 0x0, symBinAddr: 0x100003B24, symSize: 0x64 }
+  - { offsetInCU: 0x41, offset: 0x41, size: 0x8, addend: 0x0, symName: _snippet1, symObjAddr: 0x0, symBinAddr: 0x100003B24, symSize: 0x64 }
+  - { offsetInCU: 0x81, offset: 0x81, size: 0x8, addend: 0x0, symName: _snippet2, symObjAddr: 0x64, symBinAddr: 0x100003B88, symSize: 0xA0 }
+  - { offsetInCU: 0xC1, offset: 0xC1, size: 0x8, addend: 0x0, symName: _snippet3, symObjAddr: 0x104, symBinAddr: 0x100003C28, symSize: 0x6C }
+  - { offsetInCU: 0xE5, offset: 0xE5, size: 0x8, addend: 0x0, symName: _snippet4, symObjAddr: 0x170, symBinAddr: 0x100003C94, symSize: 0x114 }
+  - { offsetInCU: 0x141, offset: 0x141, size: 0x8, addend: 0x0, symName: _snippet5, symObjAddr: 0x284, symBinAddr: 0x100003DA8, symSize: 0xA0 }
+  - { offsetInCU: 0x18F, offset: 0x18F, size: 0x8, addend: 0x0, symName: _snippet6, symObjAddr: 0x324, symBinAddr: 0x100003E48, symSize: 0xAC }
+  - { offsetInCU: 0x1DD, offset: 0x1DD, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x3D0, symBinAddr: 0x100003EF4, symSize: 0x2C }
+...
