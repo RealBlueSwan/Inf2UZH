@@ -1,8 +1,0 @@
----
-triple:          'arm64-apple-darwin'
-binary-path:     '/Users/greenswan/git/Inf2UZH/ex1/Archive/task_3.5'
-relocations:
-  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _bubbleSort, symObjAddr: 0x0, symBinAddr: 0x100002364, symSize: 0xF8 }
-  - { offsetInCU: 0x33, offset: 0x33, size: 0x8, addend: 0x0, symName: _bubbleSort, symObjAddr: 0x0, symBinAddr: 0x100002364, symSize: 0xF8 }
-  - { offsetInCU: 0xAB, offset: 0xAB, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0xF8, symBinAddr: 0x10000245C, symSize: 0xAC }
-...

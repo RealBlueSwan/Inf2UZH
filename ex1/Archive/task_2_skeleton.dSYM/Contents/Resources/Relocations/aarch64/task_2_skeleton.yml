@@ -1,8 +1,0 @@
----
-triple:          'arm64-apple-darwin'
-binary-path:     '/Users/greenswan/Downloads/programming/ex1/Archive/task_2_skeleton'
-relocations:
-  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _rleCompression, symObjAddr: 0x0, symBinAddr: 0x100003DEC, symSize: 0x114 }
-  - { offsetInCU: 0x41, offset: 0x41, size: 0x8, addend: 0x0, symName: _rleCompression, symObjAddr: 0x0, symBinAddr: 0x100003DEC, symSize: 0x114 }
-  - { offsetInCU: 0x9D, offset: 0x9D, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x114, symBinAddr: 0x100003F00, symSize: 0x80 }
-...
