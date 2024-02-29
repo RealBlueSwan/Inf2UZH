@@ -1,7 +1,16 @@
 #include <stdio.h>
 
 void bubbleSort(int array[], int length) {
-    //Put your code here
+    int k = 0;
+    for (int i = length - 1; i >= 1; i--) { //how many times to repeat
+        for (int n = 1; n <= i; n++) { //repeat for the whole row
+            if (array[n-1] > array[n]) {//wert array[n] grösser als vergleichswert k
+                k = array[n-1];
+                array[n-1] = array[n];
+                array[n] = k;
+            }
+        }
+    }
 }
 
 int main() {
