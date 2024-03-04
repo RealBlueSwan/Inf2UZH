@@ -35,8 +35,12 @@ int main() {
     printf("Enter the number of disks: ");
     scanf("%d", &n);
 
+    if (n <= 0) {
+        printf("Number of disks must be positive.\n");
+        return 1;  // return an error code
+    }
+
     printf("\nHanoi Tower Steps:\n");
-    // you can change the name of the columns
     hanoi(n, 'A', 'B', 'C');
 
     printf("\nTotal number of moves: %d\n", moveCount);
