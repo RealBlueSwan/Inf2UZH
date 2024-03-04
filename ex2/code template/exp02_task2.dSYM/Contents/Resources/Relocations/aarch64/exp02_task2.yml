@@ -1,0 +1,12 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/greenswan/git/Inf2UZH/ex2/code template/exp02_task2'
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _printBoard, symObjAddr: 0x0, symBinAddr: 0x100003A28, symSize: 0x120 }
+  - { offsetInCU: 0x3F, offset: 0x3F, size: 0x8, addend: 0x0, symName: _N, symObjAddr: 0x528, symBinAddr: 0x100008000, symSize: 0x0 }
+  - { offsetInCU: 0x5B, offset: 0x5B, size: 0x8, addend: 0x0, symName: _count, symObjAddr: 0xEE8, symBinAddr: 0x100008004, symSize: 0x0 }
+  - { offsetInCU: 0x72, offset: 0x72, size: 0x8, addend: 0x0, symName: _printBoard, symObjAddr: 0x0, symBinAddr: 0x100003A28, symSize: 0x120 }
+  - { offsetInCU: 0xCE, offset: 0xCE, size: 0x8, addend: 0x0, symName: _isSafe, symObjAddr: 0x120, symBinAddr: 0x100003B48, symSize: 0x1EC }
+  - { offsetInCU: 0x12E, offset: 0x12E, size: 0x8, addend: 0x0, symName: _solveNQueens, symObjAddr: 0x30C, symBinAddr: 0x100003D34, symSize: 0x10C }
+  - { offsetInCU: 0x17C, offset: 0x17C, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x418, symBinAddr: 0x100003E40, symSize: 0x110 }
+...
