@@ -11,7 +11,22 @@ int moveCount = 0;
  * 3. move n-1 disks from source to destination via auxiliary
 */
 void hanoi(int n, char src, char aux, char dst) {
-   return;
+    // Base case (termination condition)
+    if(n == 1) {
+        printf("\n Move disk 1 from rod %c to rod %c", src, dst);
+        moveCount++;
+        return;
+    }
+
+    // Move n-1 disks from src to aux, so they are out of the way
+    hanoi(n-1, src, dst, aux);
+
+    // Move the nth disk from src to dst
+    printf("\n Move disk %d from rod %c to rod %c", n, src, dst);
+    moveCount++;
+
+    // Move the n-1 disks that we left on aux to dst
+    hanoi(n-1, aux, src, dst);
 }
 
 int main() {
