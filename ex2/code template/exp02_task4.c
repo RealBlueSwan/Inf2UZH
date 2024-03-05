@@ -10,13 +10,28 @@ int findOperator(char *expr, int h, int t) {
     // use count to make sure the current operator are not inside of a pair of '()'
     // because the ops inside '()' have higher priority
     int count = 0;
-    
-    // looking for '+' or '-'
-    ...
-
-    // looking for '*' or '/'
-    ...
-
+    for (int i = h; i <= t; i++){
+        if (expr[i] == '('){
+            count++;
+        }
+        else if ((expr[i] == ')')){
+            count--;
+        }
+        else if (count == 0 && (expr[i] == '+') || (expr[i] == '-')) {
+            return i;
+        }
+    }
+    for (int i = h; i <= t; i++){
+        if (expr[i] == '('){
+            count++;
+        }
+        else if ((expr[i] == ')')){
+            count--;
+        }
+        else if (count == 0 && (expr[i] == '*') || (expr[i] == '/')) {
+            return i;
+        }
+    }
     // -1 means no operator
     return -1;
 }
