@@ -14,7 +14,7 @@ int findOperator(char *expr, int h, int t) {
         if (expr[i] == '('){
             count++;
         }
-        else if ((expr[i] == ')')){
+        else if (expr[i] == ')') {
             count--;
         }
         else if (count == 0 && (expr[i] == '+') || (expr[i] == '-')) {
@@ -25,7 +25,7 @@ int findOperator(char *expr, int h, int t) {
         if (expr[i] == '('){
             count++;
         }
-        else if ((expr[i] == ')')){
+        else if (expr[i] == ')'){
             count--;
         }
         else if (count == 0 && (expr[i] == '*') || (expr[i] == '/')) {
@@ -35,6 +35,7 @@ int findOperator(char *expr, int h, int t) {
     // -1 means no operator
     return -1;
 }
+
 char* removeOuterParentheses(char* expr) {
     int h = 0;
     int t = strlen(expr)-1;
@@ -65,23 +66,32 @@ char* removeOuterParentheses(char* expr) {
  * Calculate the result of the expression between index h and index t
 */
 float calculator(char *expr, int h, int t) {
-
-    // check if both sides have a pair of ()
-    // remove them because they don't make any sense
-    // !!!! Attension! You must check if the '(' and ')' are paired
+    char* newExpr = removeOuterParentheses(expr);
+    h = expr - newExpr;
+    t = t - h;
     
-
     int opIndex = findOperator(expr, h, t);
-    // printf("op idx %d", opIndex);
 
-    
-    if (...) {
-        // no operator or the given expr is a negative number (-xxx)
-        // Hint: use atoi() to convert numerical string to number
+    if (opIndex == -1) {
+        return atof(newExpr + h);
     }
     else {
-        // do the math
+        float right = calculator(newExpr, opIndex + 1, t);
+        float left = calculator(newExpr, h, opIndex - 1);
+        switch (newExpr[opIndex]){
+            case '+': return left + right;
+            case '-': return left - right;
+            case '*': return left * right;
+            case '/': 
+                if (right != 0) {
+                    return left / right;
+                } else {
+                    printf("Error: Division by zero\n");
+                    exit(1);
+                }
+        }
     }
+    return 0;  // Added missing return statement
 }
 
 int main() {
