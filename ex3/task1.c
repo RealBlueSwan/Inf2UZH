@@ -6,13 +6,30 @@ int A[100000000];
 
 int linear_search(int A[], int n, int t) {
     // write you code
-
+    for (int i = 0; i < n; i++){
+        if (A[i] == t) {
+            return 1; // found
+        }
+    }
     return 0; // not found
 }
 
 int binary_search(int A[], int n, int t) {
     // write your code
-    
+    int l = 1; int r = n;
+    int m = (l+r)/2;
+    while (l<=r && t != A[m]){
+        if (t < A[m]) {
+            r = m-1;
+        }
+        else{
+            l = m+1;
+        }
+        m = (l+r)/2;
+    }
+    if (l <= r) {
+        return m;
+    }
     return 0; // not found
 }
 
