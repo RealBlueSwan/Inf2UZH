@@ -30,12 +30,11 @@ int BinarySearchCloserNumber(int A[], int t, int high, int low, int closest) {
 }
 
 int main() {
-    int A[10];
-    for(int i = 0; i < 10; i++) A[i] = i + 1;
-    int t = 3;
+    int A[] = {1, 5, 6, 7, 16, 32, 41, 54, 55, 70};
+    int t = -1000;
     int high = 9;
     int low = 0;
-    printf("%d\n", BinarySearch(A, t, high, low));
+    //printf("%d\n", BinarySearch(A, t, high, low)); //wrong shit
     printf("%d\n", BinarySearchCloserNumber(A, t, high, low, A[0]));
     return 0;
 }
