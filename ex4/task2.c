@@ -4,17 +4,21 @@
 Find the middle of the array.
 Recursively find the maximum subarray sum in the left half, right half, and crossing the middle.
 The maximum subarray sum is the maximum of the three sums found in step 3. */
-
+//maximal number
 int max(int a, int b) {return (a > b)? a : b;}
 int max3(int a, int b, int c){ return max(max(a, b), c);}
+
+int maxCrossArraySum(int* A, int l, int m, int r) {
+    
+    return;
+
+}
+
 int maxSubArraySum(int* A, int l, int r){
-    if (l == r) {
-        return A[l];
-    }
+    if (l == r) { return A[l]; }
 
     int m = (l + r)/2;
-
-    return max(maxSubArraySum(A, l, m), maxSubArraySum(A, m+1, r));
+    return max3(maxSubArraySum(A, l, m), maxSubArraySum(A, m+1, r), maxCrossArraySum(A, l, m, r));
 }
 
 int main() {
