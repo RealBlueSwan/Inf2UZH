@@ -9,7 +9,13 @@ int max(int a, int b) {return (a > b)? a : b;}
 int max3(int a, int b, int c){ return max(max(a, b), c);}
 
 int maxCrossArraySum(int* A, int l, int m, int r) {
+    int sum = 0;
+    int SumLeft = INT_MIN;
     
+    //code
+
+
+    int SumRight = INT_MIN;
     return;
 
 }
