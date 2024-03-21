@@ -1,35 +1,26 @@
 #include <stdio.h>
 #include <stdlib.h>
+/* If the array has only one element, return that element.
+Find the middle of the array.
+Recursively find the maximum subarray sum in the left half, right half, and crossing the middle.
+The maximum subarray sum is the maximum of the three sums found in step 3. */
 
-int findsub(int* A, int l, int r) {
-    int max;
-    if (l == r) {//basecase same number 
+int max(int a, int b) {return (a > b)? a : b;}
+int max3(int a, int b, int c){ return max(max(a, b), c);}
+int maxSubArraySum(int* A, int l, int r){
+    if (l == r) {
         return A[l];
     }
-    else if {
-        int m = (l+r) / 2;
-        int links = findsub(A, l, m);
-        int rechts = findsub(A, m, r);
-        return (links < rechts ? r : l);
- 
-    }
-    
-    
 
-    //compare the two
-    //what do I want to do...
-    //what is the basecase?
-    //basecase could be... one side is bigger than the other and append next value next to it... 
-    //Basecase could be that it found the biggest sum, but how should I know if its the biggest sum... 
-    //if all the numbers of a certain snipplet of the Array combined are bigger than the other snipplets
-    //make a counter like sum and if its smaller just leave that part away. 
+    int m = (l + r)/2;
 
+    return max(maxSubArraySum(A, l, m), maxSubArraySum(A, m+1, r));
 }
 
-int main(void){
-    int A[] = {-1, 2, -4, 1, 9, -6, 7, -3, 5};
-    int l = 0;
-    int r = sizeof(A) / sizeof(A[0]);
-    findsub(A, l, r); 
-
+int main() {
+    int A[] = {-2, -3, 4, -1, -2, 1, 5, -3};
+    int n = sizeof(A)/sizeof(A[0]);
+    int max_sum = maxSubArraySum(A, 0, n-1);
+    printf("Maximum contiguous sum is %d\n", max_sum);
+    return 0;
 }
