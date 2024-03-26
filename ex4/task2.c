@@ -11,11 +11,23 @@ int max3(int a, int b, int c){ return max(max(a, b), c);}
 int maxCrossArraySum(int* A, int l, int m, int r) {
     int sum = 0;
     int SumLeft = INT_MIN;
-    
+    for (int i = m; i >= l; i--) {
+        sum = sum + A[i];
+        if (sum > SumLeft){
+            SumLeft = sum;
+        }
+    }
     //code
-
-
+    sum = 0;
     int SumRight = INT_MIN;
+    for ( int i = m+1; i >=r; i++){
+        sum = sum + A[i];
+        if (sum > SumRight) {
+            SumRight = sum;
+        }
+
+    }
+    
     return;
 
 }
