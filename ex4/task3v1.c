@@ -20,19 +20,24 @@ int MajorityElement(int *A, int l, int r) {
 
     /*count left and right subarray if its not the same*/
     int leftCount = 0; int rightCount = 0;
-    for (int i = l; i >= r; i++){
+    for (int i = l; i <= r; i++){
         if (A[i] == leftMajority){
             leftCount += 1;
         }
         else if (A[i] == rightMajority){
             rightCount += 1;
         }
-        
     }
-    if (leftCount >= rightCount){
+        
+    if (leftCount > (r - l + 1) / 2){
         return leftMajority;
     }
-    return rightMajority;
+    else if (rightCount > (r - l + 1) / 2){
+        return rightMajority;
+    }
+    else {
+        return -1;  // return -1 if there is no majority element
+    }
 }
 
 void printArray(int *A, int n){
