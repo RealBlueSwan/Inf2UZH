@@ -41,6 +41,26 @@ struct month *get_previous_month(struct month *head) {
 
 struct month *swap_month(struct month *head, struct month *a, struct month *b) {
     /* TODO: Implement task 2.(c) */
+    /*what exaclty do I have to swap? I receive a and b pointers to a certain element you want to swap
+    begin node as usual, check if a is also the head, if not o on until you reach a and replace it by b
+    then continue with node until you reach b and replace it by b and continue until NULL*/
+    struct month *current = head;
+    if (a == NULL || b == NULL || a == b ) {
+        return head;
+    }
+    struct month *prev_a = head;
+    /* I need to find the nodes before a and b(prev_a, prev_b)*/
+    while (prev_a->next != a){
+        prev_a = prev_a->next;
+    }
+    struct month *prev_b = head;
+    while (prev_b->next != b){
+        prev_b = prev_b->next;
+    }
+    /*swappppin*/
+    while (current->next != NULL) {
+        current = 
+    }
     return head;
 }
 
