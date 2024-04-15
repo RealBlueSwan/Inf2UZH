@@ -15,12 +15,28 @@ struct month {
 
 void print_months(struct month *head) {
     /* TODO: Implement task 2.(a) */
-    printf("Todo print months:\n");
+    printf("print months:\n");
+    struct month *current = head;
+    while (current != NULL) {
+        /*print*/
+        printf("%s (%d)\n", current-> month_name, current->month_number); //24, for months and one 
+        current = current->next;
+    }
 }
 
-struct month *get_previous_month() {
+struct month *get_previous_month(struct month *head) {
     /* TODO: Implement task 2.(b) */
-    return NULL;
+    struct month *current = head;
+    struct month *previous = current;
+    /*chech if current Node is NULL*/
+    if (current == NULL) {
+        return NULL;
+    }
+    while (current->next != NULL){
+        previous = current;
+        current = current->next;
+    }
+    return previous;
 }
 
 struct month *swap_month(struct month *head, struct month *a, struct month *b) {
