@@ -15,9 +15,10 @@ bool is_empty(struct Stack *s){
 }
 /*tries to push something onto the stack*/
 void push(struct Stack *s, int x){
-    struct Node *new_node = (struct Node*)malloc(sizeof(struct Node*));
+    struct Node *new_node = (struct Node*)malloc(sizeof(struct Node));
     new_node->data = x;
     new_node->next = s->top;
+    s->top = new_node;
 }
 
 /*tries to pop the top element, if the element is full return -1, else return the element*/
