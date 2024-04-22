@@ -32,10 +32,11 @@ int pop(struct Stack *s){
 /*basic main function with constructor and tests*/
 int main() {
     struct Stack *s = new();
-
+    /*add two stacks on top of node*/
     push(s, 10);
-    push(s, 5);
 
+    push(s, 5);
+    /*empty stacks*/
     while (!is_empty(s)) {
         printf("%d ", pop(s)); 
     } // Output: 5 10 (LIFO order)
