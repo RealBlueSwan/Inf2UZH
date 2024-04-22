@@ -18,9 +18,8 @@ void push(struct Stack *s, int x){
     struct Node *new_node = (struct Node*)malloc(sizeof(struct Node*));
     new_node->data = x;
     new_node->next = s->top;
-    return s;
-    s->top = new_node;  
 }
+
 /*tries to pop the top element, if the element is full return -1, else return the element*/
 int pop(struct Stack *s){
     if (is_empty(s)){    return -1;  }
