@@ -24,7 +24,7 @@ int isFull() {
 /*pushes the int data on top of a stack*/
 void push(int data) {
     if (isFull()){
-        printf("Stack overflow");
+        printf("All Stacks lead to Stack overflow");
         return;
     }
     stack[++top] = data;
