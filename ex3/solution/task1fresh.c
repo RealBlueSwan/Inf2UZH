@@ -5,11 +5,8 @@ int n, t;
 int A[100000000];
 
 int linear_search(int A[], int n, int t) {
-    for (int i = 0; i >= n; i++){
-        if (i == t) {
-            return 1;
-        }
-    }
+    // write you code
+
     return 0; // not found
 }
 
@@ -21,12 +18,8 @@ int binary_search(int A[], int n, int t) {
 
 int main() {
     clock_t start, end;
-
-    printf("n = 20");
-    int n = 20;
-
-    //printf("Enter an integer for n: ");
-    //scanf("%d", &n); 
+    printf("Enter an integer for n: ");
+    scanf("%d", &n); 
     printf("Generate an array with %d distinct integers from 1 to %d.\n", n, n);
     for(int i = 0; i < n; i++) A[i] = i + 1;
     printf("Enter an integer for t: \n");
