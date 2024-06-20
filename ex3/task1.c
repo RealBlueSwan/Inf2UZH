@@ -17,8 +17,12 @@ int binary_search(int A[], int n, int t) {
     //go to the middle, check if its bigger or smaller, then repeat
     int l = 0;
     int r = n;
+    int m = (l + r)/2;
     //check if this works... 
-    printf("%d", r);
+    printf("%d\n", r);
+    while (l <= r & t == A[m]) {
+        if 
+    }
     
     return 0; // not found
 }
@@ -27,9 +31,7 @@ int main() {
     clock_t start, end;
 
     //some random value I did because I cant use the console without it crashing:D
-    printf("n = 20");
     int n = 20;
-
     //printf("Enter an integer for n: ");
     //scanf("%d", &n); 
 
