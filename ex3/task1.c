@@ -2,7 +2,7 @@
 #include <time.h> // measuring run time
 
 int n, t;
-int A[100000000];
+int A[1000000];
 
 int linear_search(int A[], int n, int t) {  //asymptotic complexity is linear n times
     for (int i = 0; i < n; i++){
@@ -18,9 +18,9 @@ int binary_search(int A[], int n, int t) {  //asymptotic complexity is log(n)
     int l = 0;
     int r = n;
     int m = (l + r)/2;
-    while (l <= r & t == A[m])  {
+    while (l <= r && t != A[m])  {
         if (A[m] > t) { r = m - 1;  }
-        else {  r = m + 1;  }
+        else {  l = m + 1;  }
         m = (l + r)/2;
     }
     if (l <= r) {   return 1;   }
@@ -31,7 +31,7 @@ int main() {
     clock_t start, end;
 
     //some random value I did because I cant use the console without it crashing:D
-    int n = 9999999;
+    int n = 99999;
     //printf("Enter an integer for n: ");
     //scanf("%d", &n); 
 
@@ -39,7 +39,7 @@ int main() {
     for(int i = 0; i < n; i++) A[i] = i + 1;
     
     //some random calue for t because I cant use the fking console pls fix.... 
-    int t = 31474;
+    int t = 3147;
     //printf("Enter an integer for t: \n");
     //scanf("%d", &t); 
     start = clock();
