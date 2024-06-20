@@ -4,7 +4,7 @@
 int n, t;
 int A[100000000];
 
-int linear_search(int A[], int n, int t) {
+int linear_search(int A[], int n, int t) {  //asymptotic complexity is linear n times
     for (int i = 0; i < n; i++){
         if (A[i] == t) {
             return 1;
@@ -13,17 +13,17 @@ int linear_search(int A[], int n, int t) {
     return 0; // not found
 }
 
-int binary_search(int A[], int n, int t) {
+int binary_search(int A[], int n, int t) {  //asymptotic complexity is log(n)
     //go to the middle, check if its bigger or smaller, then repeat
     int l = 0;
     int r = n;
     int m = (l + r)/2;
-    //check if this works... 
-    printf("%d\n", r);
-    while (l <= r & t == A[m]) {
-        if 
+    while (l <= r & t == A[m])  {
+        if (A[m] > t) { r = m - 1;  }
+        else {  r = m + 1;  }
+        m = (l + r)/2;
     }
-    
+    if (l <= r) {   return 1;   }
     return 0; // not found
 }
 
@@ -31,7 +31,7 @@ int main() {
     clock_t start, end;
 
     //some random value I did because I cant use the console without it crashing:D
-    int n = 20;
+    int n = 9999999;
     //printf("Enter an integer for n: ");
     //scanf("%d", &n); 
 
@@ -39,7 +39,7 @@ int main() {
     for(int i = 0; i < n; i++) A[i] = i + 1;
     
     //some random calue for t because I cant use the fking console pls fix.... 
-    int t = 7;
+    int t = 31474;
     //printf("Enter an integer for t: \n");
     //scanf("%d", &t); 
     start = clock();
@@ -54,3 +54,4 @@ int main() {
     run_time = ((double)(end - start))/(CLOCKS_PER_SEC/1000);
     printf("Binary search takes : %f millseconds\n", run_time); 
 }
+
