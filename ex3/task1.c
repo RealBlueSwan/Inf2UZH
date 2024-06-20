@@ -6,7 +6,7 @@ int A[100000000];
 
 int linear_search(int A[], int n, int t) {
     for (int i = 0; i < n; i++){
-        if (i == t) {
+        if (A[i] == t) {
             return 1;
         }
     }
@@ -14,7 +14,11 @@ int linear_search(int A[], int n, int t) {
 }
 
 int binary_search(int A[], int n, int t) {
-    // write your code
+    //go to the middle, check if its bigger or smaller, then repeat
+    int l = 0;
+    int r = n;
+    //check if this works... 
+    printf("%d", r);
     
     return 0; // not found
 }
@@ -22,15 +26,20 @@ int binary_search(int A[], int n, int t) {
 int main() {
     clock_t start, end;
 
+    //some random value I did because I cant use the console without it crashing:D
     printf("n = 20");
     int n = 20;
 
     //printf("Enter an integer for n: ");
     //scanf("%d", &n); 
+
     printf("Generate an array with %d distinct integers from 1 to %d.\n", n, n);
     for(int i = 0; i < n; i++) A[i] = i + 1;
-    printf("Enter an integer for t: \n");
-    scanf("%d", &t); 
+    
+    //some random calue for t because I cant use the fking console pls fix.... 
+    int t = 7;
+    //printf("Enter an integer for t: \n");
+    //scanf("%d", &t); 
     start = clock();
     linear_search(A, n, t); // your implementation
     end = clock();
