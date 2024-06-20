@@ -29,19 +29,12 @@ int binary_search(int A[], int n, int t) {  //asymptotic complexity is log(n)
 
 int main() {
     clock_t start, end;
-
-    //some random value I did because I cant use the console without it crashing:D
-    int n = 99999;
-    //printf("Enter an integer for n: ");
-    //scanf("%d", &n); 
-
+    printf("Enter an integer for n: ");
+    scanf("%d", &n); 
     printf("Generate an array with %d distinct integers from 1 to %d.\n", n, n);
     for(int i = 0; i < n; i++) A[i] = i + 1;
-    
-    //some random calue for t because I cant use the fking console pls fix.... 
-    int t = 3147;
-    //printf("Enter an integer for t: \n");
-    //scanf("%d", &t); 
+    printf("Enter an integer for t: \n");
+    scanf("%d", &t); 
     start = clock();
     linear_search(A, n, t); // your implementation
     end = clock();
