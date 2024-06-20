@@ -5,7 +5,7 @@ int n, t;
 int A[100000000];
 
 int linear_search(int A[], int n, int t) {
-    for (int i = 0; i >= n; i++){
+    for (int i = 0; i < n; i++){
         if (i == t) {
             return 1;
         }
